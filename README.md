@@ -1,4 +1,4 @@
-# os-setup
+# env-setup
 
 Central index for operating-system configuration notes, linking to all individual setup guides and preference files.
 
