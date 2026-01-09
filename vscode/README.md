@@ -2,7 +2,7 @@
 
 ## settings.json
 
-### Behavior
+### Terminal 
 
 Switch the integrated terminal to Git Bash.
 
@@ -25,9 +25,10 @@ Changes the cursor style and blinking behavior of the integrated terminal.
 }
 ```
 
-Defines how VS Code behaves when editing files.
+### Behavior
 ```json
 {
+    // Defines how VS Code behaves when editing files.
     "files.autoSave": "onFocusChange",
 }
 ```
@@ -35,18 +36,34 @@ Defines how VS Code behaves when editing files.
 
 ### Appearance 
 
-These settings turn off certain visual guides and UI elements:
+These settings disable visual guides and UI elements.
 
 ```json
 {
-  "editor.guides.indentation": false,
-  "window.commandCenter": false,
-  "window.menuBarVisibility": "compact",
-  "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
-  "editor.bracketPairColorization.enabled": false,
-  "editor.guides.bracketPairs": false,
-  "workbench.editor.tabActionCloseVisibility": false, // Hides the close (X) button on tabs;close tabs with middle-click (scroll button)
+// Disables indentation guide lines in the editor
+"editor.guides.indentation": false,
+
+// Hides the Command Center from the window title bar
+"window.commandCenter": false,
+
+// Sets the menu bar to a compact display mode
+"window.menuBarVisibility": "compact",
+
+// Disables the code minimap on the right side of the editor
+"editor.minimap.enabled": false,
+
+// Disables breadcrumb navigation (file path and symbols)
+"breadcrumbs.enabled": false,
+
+// Disables bracket pair colorization
+"editor.bracketPairColorization.enabled": false,
+
+// Disables visual guides for matching bracket pairs
+"editor.guides.bracketPairs": false,
+
+// Hides the close button on editor tabs
+"workbench.editor.tabActionCloseVisibility": false
+  
 }
 ```
 
