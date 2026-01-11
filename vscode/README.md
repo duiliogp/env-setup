@@ -6,7 +6,7 @@
 
 Switch the integrated terminal to Git Bash.
 
-```json
+```jsonc
 {
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.profiles.windows": {
@@ -26,7 +26,7 @@ Changes the cursor style and blinking behavior of the integrated terminal.
 ```
 
 ### Behavior
-```json
+```jsonc
 {
     // Defines how VS Code behaves when editing files.
     "files.autoSave": "onFocusChange",
@@ -38,7 +38,7 @@ Changes the cursor style and blinking behavior of the integrated terminal.
 
 These settings disable visual guides and UI elements.
 
-```json
+```jsonc
 {
 // Disables indentation guide lines in the editor
 "editor.guides.indentation": false,
