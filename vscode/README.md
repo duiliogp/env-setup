@@ -68,3 +68,29 @@ These settings disable visual guides and UI elements.
 ```
 
 
+## Keyboard
+
+```jsonc
+// expands the current selection based on syntax/context
+{ "key": "shift+alt+left", "command": "editor.action.smartSelect.expand", "when": "editorTextFocus" },
+{ "key": "shift+alt+right", "command": "editor.action.smartSelect.expand", "when": "editorTextFocus" },
+
+// navigate and edit text by word parts (ideal for camelCase and snake_case)
+{ "key": "ctrl+backspace", "command": "deleteWordPartLeft", "when": "textInputFocus"},
+{ "key": "ctrl+delete", "command": "deleteWordPartRight", "when": "textInputFocus" },
+{ "key": "ctrl+right", "command": "cursorWordPartRight", "when": "textInputFocus"},
+{ "key": "ctrl+left", "command": "cursorWordPartLeft", "when": "textInputFocus" },
+
+// move the current line up or down
+{ "key": "shift+alt+down", "command": "editor.action.moveLinesDownAction", "when": "textInputFocus" },
+{ "key": "shift+alt+up", "command": "editor.action.moveLinesUpAction", "when": "textInputFocus" },
+
+// copy the current line up or down
+{ "key": "ctrl+shift+up", "command": "editor.action.copyLinesUpAction", "when": "textInputFocus" },
+{ "key": "ctrl+shift+down", "command": "editor.action.copyLinesDownAction", "when": "textInputFocus" },
+
+```
+
+
+
+
