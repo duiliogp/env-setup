@@ -4,6 +4,7 @@ Central index for operating-system configuration notes, linking to all individua
 
 ## Contents
 
-- **[Linux](./linux/README.md)**
 - **[Git](./git/README.md)**
+- **[Linux](./linux/README.md)**
+- **[SQL Server](./sql-server/README.md)**
 - **[VS Code](./vscode/README.md)**
