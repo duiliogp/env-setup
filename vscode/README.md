@@ -20,6 +20,7 @@
     // Integrated terminal: disables sticky command headers while scrolling
     "terminal.integrated.stickyScroll.enabled": false,
 }
+```
 
 ### Behavior
 ```jsonc
