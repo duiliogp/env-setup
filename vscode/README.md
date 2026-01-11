@@ -3,33 +3,30 @@
 ## settings.json
 
 ### Terminal 
-
-Switch the integrated terminal to Git Bash.
-
 ```jsonc
 {
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.profiles.windows": {
-    "Git Bash": {
-      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
-    }
-  }
-}
-```
+    // Switch the integrated terminal to Git Bash.
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+        "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+        }
+    },
 
-Changes the cursor style and blinking behavior of the integrated terminal.
-```jsonc
-{
+    // Changes the cursor style and blinking behavior of the integrated terminal.
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.cursorBlinking": true,
+    
+    // Integrated terminal: disables sticky command headers while scrolling
+    "terminal.integrated.stickyScroll.enabled": false,
 }
-```
 
 ### Behavior
 ```jsonc
 {
-    // Defines how VS Code behaves when editing files.
     "files.autoSave": "onFocusChange",
+    "chat.agent.enabled": false,
+    "editor.hover.delay": 2000,
 }
 ```
 
@@ -62,11 +59,16 @@ These settings disable visual guides and UI elements.
 "editor.guides.bracketPairs": false,
 
 // Hides the close button on editor tabs
-"workbench.editor.tabActionCloseVisibility": false
-  
+"workbench.editor.tabActionCloseVisibility": false,
+
+// Editor: disables sticky headers (keeps methods, classes, etc. from sticking at the top)
+"editor.stickyScroll.enabled": false,
+
+// Explorer / Tree views: disables sticky folders and items while scrolling
+"workbench.tree.enableStickyScroll": false,
+
 }
 ```
-
 
 ## Keyboard
 
@@ -88,6 +90,15 @@ These settings disable visual guides and UI elements.
 // copy the current line up or down
 { "key": "ctrl+shift+up", "command": "editor.action.copyLinesUpAction", "when": "textInputFocus" },
 { "key": "ctrl+shift+down", "command": "editor.action.copyLinesDownAction", "when": "textInputFocus" },
+
+
+// show or hide core VS Code interface elements
+{ "key": "ctrl+m", "command": "workbench.action.toggleStatusbarVisibility" },
+{ "key": "ctrl+shift+L", "command": "workbench.action.toggleActivityBarVisibility" },
+
+// insert a new line below the current line without moving existing text
+{ "key": "shift+enter", "command": "editor.action.insertLineAfter", "when": "editorTextFocus && !editorReadonly" },
+ { "key": "shift+enter", "command": "-editor.action.goToDeclaration", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
 
 ```
 
